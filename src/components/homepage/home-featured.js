@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import aegisKit from "../images/aegisKit.jpg";
 import tfv16Tank from "../images/tfv16Tank.jpg";
-import smok40Coils from "../images/smok40Coils.jpg";
+import smokCoils from "../images/smokCoils.jpg";
 
 export default function HomeFeatured() {
     return (
@@ -35,7 +35,7 @@ export default function HomeFeatured() {
 
             <div className="featured-coils">
                 <NavLink exact to="">
-                    <img src={smok40Coils} alt="featured-coils"></img>
+                    <img src={smokCoils} alt="featured-coils"></img>
                 </NavLink>
 
                 <div className="coils-description">

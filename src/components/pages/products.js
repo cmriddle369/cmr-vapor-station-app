@@ -10,7 +10,7 @@ import freemaxCoils from "../images/freemaxCoils.jpg";
 import falconCoils from "../images/falconCoils.jpg";
 import aegisKit from "../images/aegisKit.jpg";
 import tfv16Tank from "../images/tfv16Tank.jpg";
-import smok40Coils from "../images/smok40Coils.jpg";
+import smokCoils from "../images/smokCoils.jpg";
 
 export default function Products() {
     return (
@@ -31,7 +31,7 @@ export default function Products() {
             {/* Coils */}
             <img src={freemaxCoils} />
             <img src={falconCoils} />
-            <img src={smok40Coils} />
+            <img src={smokCoils} />
         </div>
     )
 }
