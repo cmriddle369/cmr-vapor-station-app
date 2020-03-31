@@ -1,6 +1,5 @@
 import React, { Component  } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
-import axios from 'axios';
 
 import ContactForm from "../contact/contact-form";
 import Locations from "../contact/location";
@@ -21,14 +20,6 @@ export default class Contact extends Component {
     // function to check for email structure??
     // connect to api
     // admin login??
-
-    getMessages() {
-        axios
-            .get("")
-            .then(response => {
-                
-            })
-    }
 
 
     render() {
