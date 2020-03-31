@@ -1,0 +1,25 @@
+.location-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+
+    h4 {
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        justify-items: center;
+        align-items: center;
+    }
+
+    a {
+        cursor: pointer;
+        color: $charcoal;
+        text-decoration: none;
+    }
+}
