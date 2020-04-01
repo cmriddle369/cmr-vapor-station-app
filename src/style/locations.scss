@@ -10,16 +10,24 @@
         justify-content: center;
         margin-top: 0px;
         margin-bottom: 5px;
+        color: $offwhite;
     }
 
     p {
+        flex-direction: column;
         justify-items: center;
         align-items: center;
+        color: $offwhite;
     }
 
     a {
         cursor: pointer;
-        color: $charcoal;
+        color: $offwhite;
         text-decoration: none;
+        padding-top: 5px;
+
+        &:hover {
+            color: $charcoal;
+        }
     }
 }
