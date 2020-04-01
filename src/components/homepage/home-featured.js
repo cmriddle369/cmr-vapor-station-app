@@ -10,7 +10,7 @@ export default function HomeFeatured() {
         <div className="home-featured-wrapper">
             <h2>Featured Products: </h2>
             <div className="featured-mod">
-                <NavLink exact to="">
+                <NavLink exact to="/products">
                     <img src={aegisKit} alt="featured-mod"></img>
                 </NavLink>
 
@@ -22,7 +22,7 @@ export default function HomeFeatured() {
             </div>
 
             <div className="featured-tank">
-                <NavLink exact to="">
+                <NavLink exact to="/products">
                     <img src={tfv16Tank} alt="featured-tank"></img>
                 </NavLink>
 
@@ -34,7 +34,7 @@ export default function HomeFeatured() {
             </div>
 
             <div className="featured-coils">
-                <NavLink exact to="">
+                <NavLink exact to="/products">
                     <img src={smokCoils} alt="featured-coils"></img>
                 </NavLink>
 
