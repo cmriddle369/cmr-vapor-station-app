@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export default function Locations() {
     return (
-        <div className='location-wrapper'>
+        <div className="location-wrapper">
             <div className="Canal location">
                 <h4>Canal Winchester</h4>
                 <p>

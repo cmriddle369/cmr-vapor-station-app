@@ -1,0 +1,24 @@
+.ejuice-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    padding-top: 50px;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $offwhite;
+        padding-bottom: 50px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $offwhite;
+        padding-bottom: 15px;
+    }
+}

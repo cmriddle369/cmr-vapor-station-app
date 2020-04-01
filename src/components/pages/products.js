@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import aegisLegend from "../images/aegisLegend.jpg";
 import voopooMod from "../images/voopooMod.jpg";
@@ -14,24 +14,29 @@ import smokCoils from "../images/smokCoils.jpg";
 
 export default function Products() {
     return (
-        <div className='products-wrapper'>
-            {/* Mods */}
-            <img src={aegisLegend} />
-            <img src={voopooMod} />
-            <img src={aegisKit} />
+        <div className="products-wrapper">
+            <h2>Mods</h2>
+            <div className="mods-wrapper">
+                <img src={aegisLegend} />
+                <img src={voopooMod} />
+                <img src={aegisKit} />
+                <img src={nordPod} />
+                <img src={wocketPod} />
+                <img src={galaPod} />
+            </div>
 
-            <img src={nordPod} />
-            <img src={wocketPod} />
-            <img src={galaPod} />
-
-            {/* Tanks */}
-            <img src={horizonTank} />
-            <img src={tfv16Tank} />
+            <h2>Tanks</h2>
+            <div className="tanks-wrapper">
+                <img src={horizonTank} />
+                <img src={tfv16Tank} />
+            </div>
             
-            {/* Coils */}
-            <img src={freemaxCoils} />
-            <img src={falconCoils} />
-            <img src={smokCoils} />
+            <h2>Coils</h2>
+            <div className="coils-wrapper">
+                <img src={freemaxCoils} />
+                <img src={falconCoils} />
+                <img src={smokCoils} />
+            </div>
         </div>
     )
 }

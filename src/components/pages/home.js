@@ -1,19 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import HomeFeatured from '../homepage/home-featured';
+import HomeFeatured from "../homepage/home-featured";
+import Slideshow from "../slideshow"
 
- import ParallaxImage from '../homepage/parallax-image';
-import { ParallaxProvider, withController } from 'react-scroll-parallax';
-// import VapeCarousel from '../carousel';
+import ParallaxImage from "../homepage/parallax-image";
+import { ParallaxProvider, withController } from "react-scroll-parallax";
 
 const Home = () => {
     return (
-        <div className='home-wrapper'>
+        <div className="home-wrapper">
+            <div className="welcome-message-wrapper">
+                <h2>Welcome to Vapor Station</h2>
+                <p>3 Amazing locations with friendly and helpful staff</p>
+            </div>
             <ParallaxProvider>
                 {ParallaxImage()}
+                <Slideshow />
                 <HomeFeatured />
-                {/* <VapeCarousel /> */}
-                {/* TODO: greeting message, featured products section */}
             </ParallaxProvider>
         </div>
     )

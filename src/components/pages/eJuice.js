@@ -1,54 +1,44 @@
-import React, { Component  } from 'react';
-import { NavLink } from "react-router-dom";
+import React, { Component  } from "react";
 
-import juiceHeadLogo from "../images/juiceHeadLogo.png";
 import juiceHead from "../images/juiceHead.png";
 
-import pachaMamaLogo from "../images/pachaMamaLogo.png";
 import pachaMama from "../images/pachaMama.png";
 
-import glasBasixLogo from "../images/glasBasixLogo.png";
 import glasBasix from "../images/glasBasix.png";
 
-import nakedLogo from "../images/nakedLogo.png";
 import naked from "../images/naked.png";
 
-import twistLogo from "../images/twistLogo.png";
 import twist from "../images/twist.png";
 
 export default function Ejuice() {
     return (
-        <div className='ejuice-wrapper'>
-            <div className='product-link-wrapper'>
-                <NavLink to="/" activeClassName ="nav-link-active">
-                    <img src={juiceHeadLogo} />
-                </NavLink>
+        <div className="ejuice-wrapper">
+            <div className="product-link-wrapper">
+                <h1>eJuice</h1>
+                <h2>Juice Head</h2>
+                <div className="juiceHead-wrapper">
+                    <img src={juiceHead}></img>
+                </div>
 
-                <NavLink to="/" activeClassName ="nav-link-active">
-                    <img src={pachaMamaLogo} />
-                </NavLink>
+                <h2>Pacha Mama</h2>
+                <div className="pachaMama-wrapper">
+                    <img src={pachaMama}></img>
+                </div>
 
-                <NavLink to="/" activeClassName ="nav-link-active">
-                    <img src={glasBasixLogo} />
-                </NavLink>
+                <h2>Glas Basix</h2>
+                <div className="glasBasix-wrapper">
+                    <img src={glasBasix}></img>
+                </div>
 
-                <NavLink to="/" activeClassName ="nav-link-active">
-                    <img src={nakedLogo} />
-                </NavLink>
-
-                <NavLink to="/" activeClassName ="nav-link-active">
-                    <img src={twistLogo} />
-                </NavLink>
+                <h2>Naked</h2>
+                <div className="naked-wrapper">
+                    <img src={naked}></img>
+                </div>
                 
-                {/* <img src={juiceHead} /> */}
-                
-                {/* <img src={pachaMama} /> */}
-                
-                {/* <img src={glasBasix} /> */}
-                
-                {/* <img src={naked} /> */}
-                
-                {/* <img src={twist} /> */}
+                <h2>Twist</h2>
+                <div className="twist-wrapper">
+                    <img src={twist}></img>
+                </div>
             </div>
         </div>
     )

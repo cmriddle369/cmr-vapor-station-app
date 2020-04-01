@@ -4,36 +4,41 @@
     justify-content: center;
     align-items: center;
 
-    .form-group {
+    .form-wrapper {
         width: 50%;
         margin-bottom: 15px;
 
-            input {
-                border: 1px solid $grey;
-                border-radius: 3px;
-                width: 100%;
-                height: auto;
-                padding: 5px 15px 5px 15px;
+        input {
+            border: 1px solid $grey;
+            border-radius: 3px;
+            width: 100%;
+            height: auto;
+            padding: 5px 15px 5px 15px;
+            margin-bottom: 15px;
 
-                &:focus {
-                    outline: none;
-                }
+            &:focus {
+                outline: none;
             }
-    }
+        }
 
-    textarea {
-        border: 1px solid $grey;
-        border-radius: 3px;
-        width: 100%;
-        height: 100px;
-        padding: 5px 15px 5px 15px;
+        textarea {
+            border: 1px solid $grey;
+            border-radius: 3px;
+            width: 100%;
+            height: 100px;
+            padding: 5px 15px 5px 15px;
 
-        &:focus {
-            outline: none;
+            &:focus {
+                outline: none;
+            }
         }
     }
 
-    .submit-btn {
-        color: $grey;
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $charcoal;
+        cursor: pointer;           
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component  } from 'react';
+import React, { Component  } from "react";
 
 export default class ContactForm extends Component {
     constructor(props) {
@@ -13,7 +13,18 @@ export default class ContactForm extends Component {
         this.onNameChange = this.onNameChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.componentDidMount = this.componentDidMount.bind(this);
+    }
+
+    componentDidMount() {
+        fetch("https://cmr-vapor-station-app.herokuapp.com/contact/get", {
+            method: "GET"
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
     }
 
     onNameChange(event) {
@@ -25,58 +36,65 @@ export default class ContactForm extends Component {
     }
 
     onMessageChange(event) {
-        this.setState({message: event.target.value})
+        this.setState({
+            message: event.target.message
+        })
+    }
+
+    handleChange(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     handleSubmit(event) {
         event.preventDefault();
-    }
 
-    buildForm() {
-        let formData = new FormData();
-    
-        formData.append(this.state.name);
-        formData.append(this.state.email);
-        formData.append(this.state.message);
-    
-        return formData;
-    }
+        fetch("https://cmr-vapor-station-app.herokuapp.com/contact/post", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+                name: this.state.name,
+                email: this.state.email,
+                message: this.state.message
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data)
+        .catch(error => console.log(error))
+    )}
     
     render() {
         return (
             <div className="contact-form-wrapper">
-                <h3>Please fill the form out and we will get back to you as soon as possible.</h3>
-                <div className="form-group">
-                    <label><strong>Name: </strong></label>
-                        <input
-                            type="text"
-                            name="name"
-                            value={this.state.name}
-                            onChange={this.onNameChange}
-                        />
-                </div>
+                <form onSubmit={this.handleSubmit} className="form-wrapper">
+                    <h3>Please fill the form out and we will get back to you as soon as possible.</h3>
+                    <div className="form">
+                        <label><strong>Name: </strong></label>
+                            <input
+                                type="text"
+                                name="name"
+                                value={this.state.name}
+                                onChange={this.onNameChange}
+                            />
 
-                <div className="form-group">
-                    <label><strong>Email: </strong></label>
-                        <input 
-                            type="text"
-                            name="email"
-                            value={this.state.email}
-                            onChange={this.onEmailChange}
-                        />
-                </div>
+                        <label><strong>Email: </strong></label>
+                            <input 
+                                type="text"
+                                name="email"
+                                value={this.state.email}
+                                onChange={this.onEmailChange}
+                            />
 
-                <div className="form-group">
-                    <label><strong>Message: </strong></label>
-                        <textarea
-                            value={this.state.message}
-                            onChange={this.onMessageChange}
-                        />
-                </div>
-
-                <div className="submit-btn form-group">
-                    <button type="submit">Submit</button>
-                </div>            
+                        <label><strong>Message: </strong></label>
+                            <textarea
+                                type="text"
+                                value={this.state.message}
+                                onChange={this.onMessageChange}
+                            />
+                    </div>
+                    <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                </form>        
             </div>
         );
     }

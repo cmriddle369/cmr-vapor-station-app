@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import Warning from "./warning-bar";
 import Navbar from "./navbar";
@@ -18,7 +18,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className='app'>
+      <div className="app">
         <ParallaxProvider>
           <Router>
             <div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 
 
 import vapeLogo from "./images/vapeLogo.jpg";
@@ -19,7 +18,7 @@ const Navbar = props => {
     
     
     return (
-        <div className='navbar-wrapper'>
+        <div className="navbar-wrapper">
             <div className="left-side">
                 <div>
                     <NavLink exact to="/">

@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <div className='footer-wrapper'>
-            <div className='footer-left-side'>
+        <div className="footer-wrapper">
+            <div className="footer-left-side">
                 {/* copyright icon goes here */}
                 {/* year established */}
                 {/* company name, ie: Vapor Station. */}
                 {/* all right reserved. */}
             </div>
-            <div className='footer-right-side'>
+            <div className="footer-right-side">
                 <div className="nav-link-wrapper">
                     <NavLink exact to="/" activeClassName ="nav-link-active">
                         Home

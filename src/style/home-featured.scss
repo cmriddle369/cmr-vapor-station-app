@@ -1,11 +1,15 @@
 .home-featured-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     background-color: $offwhite;
     column-gap: auto;
     position: relative;
+
+    h2 {
+        text-decoration: underline;
+    }
 
     .featured-mod {
         display: flex;

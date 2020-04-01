@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 import aegisKit from "../images/aegisKit.jpg";
 import tfv16Tank from "../images/tfv16Tank.jpg";
@@ -7,8 +7,8 @@ import smokCoils from "../images/smokCoils.jpg";
 
 export default function HomeFeatured() {
     return (
-        <div className='home-featured-wrapper'>
-            {/* TODO => Add featured header */}
+        <div className="home-featured-wrapper">
+            <h2>Featured Products: </h2>
             <div className="featured-mod">
                 <NavLink exact to="">
                     <img src={aegisKit} alt="featured-mod"></img>
@@ -16,7 +16,7 @@ export default function HomeFeatured() {
 
                 <div className="mod-description">
                     <p>
-                        Some cool info
+                        Aegis Kit Mod
                     </p>
                 </div>
             </div>
@@ -28,7 +28,7 @@ export default function HomeFeatured() {
 
                 <div className="tank-description">
                     <p>
-                        Some cool info
+                        TFV16 Tank
                     </p>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default function HomeFeatured() {
 
                 <div className="coils-description">
                     <p>
-                        Some cool info
+                        Smok Coils
                     </p>
                 </div>
             </div>
