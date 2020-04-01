@@ -17,25 +17,25 @@ export default function Products() {
         <div className="products-wrapper">
             <h2>Mods</h2>
             <div className="mods-wrapper">
-                <img src={aegisLegend} />
-                <img src={voopooMod} />
-                <img src={aegisKit} />
-                <img src={nordPod} />
-                <img src={wocketPod} />
-                <img src={galaPod} />
+                <img src={aegisLegend} width={200} height={200} />
+                <img src={voopooMod} width={200} height={200} />
+                {/* <img src={aegisKit} width={400} height={400} /> */}
+                <img src={nordPod} width={200} height={200} />
+                {/* <img src={wocketPod} width={400} height={400} /> */}
+                {/* <img src={galaPod} width={400} height={400} /> */}
             </div>
 
             <h2>Tanks</h2>
             <div className="tanks-wrapper">
-                <img src={horizonTank} />
-                <img src={tfv16Tank} />
+                <img src={horizonTank} width={200} height={200} />
+                <img src={tfv16Tank} width={200} height={200} />
             </div>
             
             <h2>Coils</h2>
             <div className="coils-wrapper">
-                <img src={freemaxCoils} />
-                <img src={falconCoils} />
-                <img src={smokCoils} />
+                <img src={freemaxCoils} width={200} height={200} />
+                <img src={falconCoils} width={200} height={200} />
+                {/* <img src={smokCoils} width={200} height={200} /> */}
             </div>
         </div>
     )

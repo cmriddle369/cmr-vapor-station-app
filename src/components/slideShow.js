@@ -34,7 +34,7 @@ export default class SlideShow extends Component {
     };
     const { slideImages } = this.state;
     return (
-      <div>
+      <div style={{ backgroundColor: "#8a8a8a"}}>
         <div className="slide-container">
           <Slide {...properties}>
             {slideImages.map((each, index) => (

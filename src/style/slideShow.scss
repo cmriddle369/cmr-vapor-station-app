@@ -1,11 +1,12 @@
 .slide-container {
     width: 50%;
-    height: 300px;
+    height: 100%;
     margin: auto;
-    background-color: $offwhite;
+    background-color: $grey;
+    padding-top: 15px;
 
     .react-slideshow-container {
-        height: 100vh;
+        height: 100%;
         width: 100%;
         background-size: cover;
 
