@@ -39,7 +39,7 @@ export default class SlideShow extends Component {
           <Slide {...properties}>
             {slideImages.map((each, index) => (
               <div key={index} className="each-slide">
-                <div style={{ backgroundImage: `url(${each})` }}>
+                <div style={{ backgroundImage: `url(${each})`}}>
                 </div>
               </div>
             ))}
