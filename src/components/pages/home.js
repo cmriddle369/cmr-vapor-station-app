@@ -1,7 +1,7 @@
 import React from "react";
 
 import HomeFeatured from "../homepage/home-featured";
-import Slideshow from "./slideShow";
+import Slideshow from "../slideShow";
 
 import ParallaxImage from "../homepage/parallax-image";
 import { ParallaxProvider, withController } from "react-scroll-parallax";
