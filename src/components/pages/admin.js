@@ -5,6 +5,7 @@ export default class Admin extends Component {
         super(props)
 
         this.state = {
+            items: []
         }
     }
 
@@ -18,15 +19,26 @@ componentDidMount() {
         headers: { "content-type": "application/json" },
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => this.setState({ items: data }))
     .catch(error => console.log(error))
 }
 
     render() {
+        const formItems = this.state.items.map(item => {
+            return <p>{item.name}</p>
+        })
         return (
             <div className='admin-wrapper'>
                 <div className="form-content-wrapper">
-
+                    <ul>
+                        <p>{formItems}</p>
+                    </ul>
+                    {/* <ul>
+                        {this.state.items.map((item) => {
+                            return <p>{item.name}</p>
+                            }
+                        )}                        
+                    </ul> */}
                 </div> 
             </div>
         )
