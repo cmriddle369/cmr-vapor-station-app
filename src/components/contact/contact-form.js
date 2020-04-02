@@ -7,7 +7,8 @@ export default class ContactForm extends Component {
         this.state = {
             name: "",
             email: "",
-            message: ""
+            message: "",
+            data: []
         }
 
         this.onNameChange = this.onNameChange.bind(this);
@@ -18,13 +19,17 @@ export default class ContactForm extends Component {
         this.componentDidMount = this.componentDidMount.bind(this);
     }
 
-    componentDidMount() {
+    getFormData() {
         fetch("https://cmr-vapor-station-app.herokuapp.com/contact/get", {
             method: "GET"
         })
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.log(error))
+    }
+
+    componentDidMount() {
+        this.getFormData();
     }
 
     onNameChange(event) {
@@ -49,6 +54,7 @@ export default class ContactForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        alert("Your message has been sent. Thank you!")
 
         fetch("https://cmr-vapor-station-app.herokuapp.com/contact/post", {
             method: "POST",
@@ -63,13 +69,13 @@ export default class ContactForm extends Component {
         .then(data => console.log(data))
         .catch(error => console.log(error))
 
-        this.setState({name: "", email: "", message: ""})
+        this.setState({ name: "", email: "", message: "" })
     }
     
     render() {
         return (
             <div className="contact-form-wrapper">
-                <form onSubmit={this.handleSubmit} className="form-wrapper">
+                <form handleSubmit={this.handleSubmit} className="form-wrapper">
                     <h3>Please fill the form out and we will get back to you as soon as possible.</h3>
                     <div className="form">
                         <label><strong>Name: </strong></label>
