@@ -44,6 +44,7 @@ export default class ContactForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+
         alert("Your message has been sent. Thank you!")
 
         fetch("https://cmr-vapor-station-app.herokuapp.com/contact/post", {
@@ -65,7 +66,7 @@ export default class ContactForm extends Component {
     render() {
         return (
             <div className="contact-form-wrapper">
-                <form action="https://cmriddle369@gmail.com" method="GET" handleSubmit={this.handleSubmit} className="form-wrapper">
+                <form action="https://cmriddle369@gmail.com" method="GET" onSubmit={this.handleSubmit} className="form-wrapper">
                     <h3>Please fill the form out and we will get back to you as soon as possible.</h3>
                     <div className="form">
                         <label><strong>Name: </strong></label>
