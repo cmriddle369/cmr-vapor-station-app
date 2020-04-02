@@ -15,12 +15,12 @@ export default class ContactForm extends Component {
         this.onMessageChange = this.onMessageChange.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.componentDidMount = this.componentDidMount.bind(this);
+        // this.componentDidMount = this.componentDidMount.bind(this);
     }
 
-    componentDidMount() {
-        this.handleSubmit();
-    }
+    // componentDidMount() {
+    //     this.handleSubmit();
+    // }
 
     onNameChange(event) {
         this.setState({name: event.target.value})
