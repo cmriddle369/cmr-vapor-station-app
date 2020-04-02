@@ -1,5 +1,7 @@
 import React, { Component  } from 'react';
 
+import ContactForm from "../contact/contact-form"
+
 export default class Admin extends Component {
     constructor(props) {
         super(props)
@@ -24,21 +26,14 @@ componentDidMount() {
 }
 
     render() {
-        const formItems = this.state.items.map(item => {
-            return <p>{item.name}</p>
-        })
+        const formRecords = this.state.items.map(item => {
+            return <ContactForm key={item.id} item={item} />;
+        });
+
         return (
             <div className='admin-wrapper'>
                 <div className="form-content-wrapper">
-                    <ul>
-                        <p>{formItems}</p>
-                    </ul>
-                    {/* <ul>
-                        {this.state.items.map((item) => {
-                            return <p>{item.name}</p>
-                            }
-                        )}                        
-                    </ul> */}
+                    <p>{formRecords}</p>
                 </div> 
             </div>
         )
