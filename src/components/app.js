@@ -9,6 +9,7 @@ import Advocacy from "./pages/advocacy";
 import Products from "./pages/products";
 import Ejuice from "./pages/eJuice";
 import Contact from "./pages/contact";
+import Admin from "./pages/admin";
 import Footer from "./footer";
 
 export default class App extends Component {
@@ -30,6 +31,7 @@ export default class App extends Component {
                   <Route path="/advocacy" component={Advocacy} />
                   <Route path="/products" component={Products} />
                   <Route path="/ejuice" component={Ejuice} />
+                  <Route path="/admin" component={Admin} />
                 </Switch>
               <Footer />
             </div>

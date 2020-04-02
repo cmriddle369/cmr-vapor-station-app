@@ -56,6 +56,12 @@ const Navbar = props => {
                         Contact Us
                     </NavLink>
                 </div>
+
+                <div className="nav-link-wrapper">
+                    <NavLink exact to="/admin" activeClassName ="nav-link-active">
+                        Admin
+                    </NavLink>
+                </div>
             </div>
         </div>
     )
