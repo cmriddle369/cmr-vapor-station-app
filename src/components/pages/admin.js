@@ -5,7 +5,6 @@ export default class Admin extends Component {
         super(props)
 
         this.state = {
-            formArray: []
         }
     }
 
@@ -27,7 +26,7 @@ componentDidMount() {
         return (
             <div className='admin-wrapper'>
                 <div className="form-content-wrapper">
-                    
+
                 </div> 
             </div>
         )

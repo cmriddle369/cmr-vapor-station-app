@@ -19,7 +19,7 @@ export default class ContactForm extends Component {
     }
 
     componentDidMount() {
-        this.getFormData();
+        this.handleSubmit();
     }
 
     onNameChange(event) {
