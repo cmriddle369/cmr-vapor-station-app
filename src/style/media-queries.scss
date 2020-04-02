@@ -1,0 +1,174 @@
+// media query navbar => hamburger dropdown?
+@media screen and (max-width: 600px) {
+    .warning-wrapper > h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .left-side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .vape-logo img {
+                width: 90px;
+                height: 60px;
+            }
+
+            .nav-link-wrapper {
+                font-size: 9px;
+            }
+        }
+    }
+
+    .parallax-background {
+        display: none;
+    }
+
+    .home-featured-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .advocacy-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .what-it-is-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
+
+        .what-it-says-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
+
+        .what-you-can-do-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+        }
+    }
+
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .form-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px; 
+            }
+        }
+    }
+
+    .location-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        font-size: 12px;
+
+        border: 1px solid $offwhite;
+    }
+
+    .products-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .mods-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .tanks-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .coils-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+// media query advocacy => bottom boxes move across page
+
+// get rid of slideshow
+
+// contact page => locations underneath form in a row

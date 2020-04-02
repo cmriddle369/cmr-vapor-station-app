@@ -20,7 +20,7 @@ const Navbar = props => {
     return (
         <div className="navbar-wrapper">
             <div className="left-side">
-                <div>
+                <div className="vape-logo">
                     <NavLink exact to="/">
                         <img src={vapeLogo} alt="logo"></img>
                     </NavLink>

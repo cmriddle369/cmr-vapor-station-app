@@ -14,7 +14,6 @@ export default function Ejuice() {
     return (
         <div className="ejuice-wrapper">
             <div className="product-link-wrapper">
-                <h1>eJuice</h1>
                 <h2>Juice Head</h2>
                 <div className="juiceHead-wrapper">
                     <img src={juiceHead} width={200} height={300}></img>
