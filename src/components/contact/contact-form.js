@@ -60,9 +60,11 @@ export default class ContactForm extends Component {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data)
+        .then(data => console.log(data))
         .catch(error => console.log(error))
-    )}
+
+        this.setState({name: "", email: "", message: ""})
+    }
     
     render() {
         return (
