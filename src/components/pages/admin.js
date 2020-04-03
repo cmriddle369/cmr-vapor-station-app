@@ -1,5 +1,7 @@
 import React, { Component  } from 'react';
 
+import ContactItem from "../contact/contact-item";
+
 export default class Admin extends Component {
     constructor(props) {
         super(props)
@@ -7,32 +9,41 @@ export default class Admin extends Component {
         this.state = {
             items: []
         }
+
+        this.contactItems = this.contactItems.bind(this);
+        this.handleFilter = this.handleFilter.bind(this);
     }
 
-componentDidMount() {
-    fetch("https://cmr-vapor-station-app.herokuapp.com/contact/admin/post", {
-        method: "GET"
-    })
-    .then(response => response.json())
-    .then(data => this.setState({ items: data.results }))
-    .catch(error => console.log(error))
-}
+    handleFilter(filter) {
+        this.setState({
+            items: this.state.data.filter(item => {
+                return item.id === filter;
+            })
+        })
+    }
+
+    componentDidMount() {
+        fetch("https://cmr-vapor-station-api.herokuapp.com/admin/post", {
+            method: "GET"
+        })
+        .then(response => response.json())
+        .then(data => {
+            this.setState({ items: data})
+        })
+        // .then(data => console.log(data))
+        .catch(error => console.log(error))
+    }
+
+    contactItems() {
+        return this.state.items.map(item => {
+            return <ContactItem key={item.id} name={item.name} email={item.email} message={item.message} />
+        })
+    }
 
     render() {
-        const { items } = this.state;
         return (
-            <div className='admin-wrapper'>
-                <div className="form-content-wrapper">
-                    {items.map((item, id) => (
-                        <div key={id} className="each-item">
-                            <div className="item-list">
-                                <p>{item.name}</p>
-                                <p>{item.email}</p>
-                                <p>{item.message}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div> 
+            <div className="admin-wrapper">
+                <p>{this.contactItems()}</p>
             </div>
         )
     }
