@@ -10,7 +10,7 @@ export default function ContactItem(props) {
                 <p>{props.message}</p>
             </ul>
 
-            <Link to={"admin/post"}></Link>
+            <Link to={"/admin/post"}></Link>
         </div>
     )
 }

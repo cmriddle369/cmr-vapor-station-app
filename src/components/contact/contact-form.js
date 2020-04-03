@@ -47,7 +47,7 @@ export default class ContactForm extends Component {
 
         alert("Your message has been sent. Thank you!")
 
-        fetch("https://cmr-vapor-station-app.herokuapp.com/contact/post", {
+        fetch("https://cmr-vapor-station-app.herokuapp.com/admin/post", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({

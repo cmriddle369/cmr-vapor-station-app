@@ -30,7 +30,6 @@ export default class Admin extends Component {
         .then(data => {
             this.setState({ items: data})
         })
-        // .then(data => console.log(data))
         .catch(error => console.log(error))
     }
 
