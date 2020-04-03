@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $grey;
+    color: $offwhite;
+    height: 100vh;
 
     .form-content-wrapper {
         display: flex;

@@ -5,25 +5,16 @@ export default class Admin extends Component {
         super(props)
 
         this.state = {
-            items: [
-                name = "",
-                email = "",
-                message = ""
-            ]
+            items: []
         }
     }
 
-// TODO =>
-// get request form submission data
-// render info onto page so it can be read
-
 componentDidMount() {
     fetch("https://cmr-vapor-station-app.herokuapp.com/contact/admin/post", {
-        method: "GET",
-        headers: { "content-type": "application/json" },
+        method: "GET"
     })
     .then(response => response.json())
-    .then(data => this.setState({ items: data }))
+    .then(data => this.setState({ items: data.results }))
     .catch(error => console.log(error))
 }
 
@@ -32,8 +23,8 @@ componentDidMount() {
         return (
             <div className='admin-wrapper'>
                 <div className="form-content-wrapper">
-                    {items.map((item, index) => (
-                        <div key={index} className="each-item">
+                    {items.map((item, id) => (
+                        <div key={id} className="each-item">
                             <div className="item-list">
                                 <p>{item.name}</p>
                                 <p>{item.email}</p>
