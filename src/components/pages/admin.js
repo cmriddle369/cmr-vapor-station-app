@@ -1,13 +1,15 @@
 import React, { Component  } from 'react';
 
-import ContactForm from "../contact/contact-form"
-
 export default class Admin extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            items: []
+            items: [
+                name = "",
+                email = "",
+                message = ""
+            ]
         }
     }
 
@@ -26,14 +28,19 @@ componentDidMount() {
 }
 
     render() {
-        const formRecords = this.state.items.map(item => {
-            return <ContactForm key={item.id} item={item} />;
-        });
-
+        const { items } = this.state;
         return (
             <div className='admin-wrapper'>
                 <div className="form-content-wrapper">
-                    <p>{formRecords}</p>
+                    {items.map((item, index) => (
+                        <div key={index} className="each-item">
+                            <div className="item-list">
+                                <p>{item.name}</p>
+                                <p>{item.email}</p>
+                                <p>{item.message}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div> 
             </div>
         )
